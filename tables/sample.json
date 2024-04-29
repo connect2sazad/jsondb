@@ -1,0 +1,8 @@
+{
+  "table": "users",
+  "columns": [
+    "userid:p,u,f_pid@products,n",
+    "password:n"
+  ],
+  "rows": []
+}

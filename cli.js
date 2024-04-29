@@ -1,6 +1,9 @@
 const { exec } = require('child_process');
-const ct = require('./modules/ct');
+
 const conf = require('./modules/conf');
+const ct = require('./modules/ct');
+const at = require('./modules/at');
+const st = require('./modules/st');
 
 // Prompt the user
 process.stdout.write('jsondb> ');
@@ -67,9 +70,25 @@ function clear() {
     }
 }
 
+function show_tables(){
+    // st((err, tables) => {
+    //     if (err) {
+    //         console.error('Error:', err);
+    //         return;
+    //     }
+        
+    //     console.log('Tables:', tables);
+    // });
+    st();
+}
+
 // Example function
-function create_table(tableName) {
-    console.log(ct(tableName));
+function create_table(table, columns) {
+    console.log(ct(table, columns));
+}
+
+function alter_table(table) {
+    console.log(at(table));
 }
 
 // Function to exit the program

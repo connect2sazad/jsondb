@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-function ct(table_name) {
+function ct(table_name, columns_list) {
     // Define the file path
     const filePath = path.join(__dirname, '..', 'tables', `${table_name}.json`);
 
@@ -11,7 +11,7 @@ function ct(table_name) {
     }
 
     // Create a JSON object
-    const data = { table: table_name, columns: [id], rows: [] };
+    const data = { table: table_name, columns: columns_list, rows: [] };
 
     // Convert the JSON object to a string
     const jsonData = JSON.stringify(data, null, 2); // null and 2 are for formatting

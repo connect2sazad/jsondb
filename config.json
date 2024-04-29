@@ -1,5 +1,5 @@
 {
-  "name": "jdb",
+  "name": "JSONDB",
   "default_port": 448,
   "port": 448,
   "db": "mydatabase",
