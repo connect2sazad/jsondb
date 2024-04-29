@@ -1,0 +1,8 @@
+{
+  "name": "jdb",
+  "default_port": 448,
+  "port": 450,
+  "db": "mydatabase",
+  "user": "root",
+  "password": ""
+}
